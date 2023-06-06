@@ -12,9 +12,9 @@
             </div>
         @endif
 
-        <a href="{{ route('tasks.create') }}" class="btn btn-primary mb-3">Adicionar Tarefa</a>
+        <a class="botaoadicionar" href="{{ route('tasks.create') }}" >Adicionar Tarefa</a>
 
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Título</th>
@@ -30,11 +30,11 @@
                         <td>{{ $task->description }}</td>
                         <td>{{ $task->created_at }}</td>
                         <td>
-                            <a href="{{ route('tasks.edit', $task) }}" class="btn btn-sm btn-primary">Editar</a>
+                            <a href="{{ route('tasks.edit', $task) }}" class="btn btn-sm btn-editar">Editar</a>
                             <form action="{{ route('tasks.destroy', $task) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza que deseja excluir essa tarefa?')">Excluir</button>
+                                <button type="submit" class=" d-inline" onclick="return confirm('Tem certeza que deseja excluir essa tarefa?')">Excluir</button>
                             </form>
                         </td>
                     </tr>
