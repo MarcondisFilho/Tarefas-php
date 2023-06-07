@@ -4,8 +4,10 @@ body {
   height: 100vh;
   width: 100%;
   font-family: 'Rubik', sans-serif;
+  min-width: 900px;
 }
-#app{
+
+#app {
   background-color: #fff;
   width: 35%;
   margin: 30px auto;
@@ -19,12 +21,15 @@ body {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
+
 .text-center {
   text-align: center;
 }
+
 .pull-left {
   float: left;
 }
+
 .btn-link {
   font-size: 10px;
   width: 100%;
@@ -49,90 +54,119 @@ body {
   clear: both;
   height: 0;
 }
+
 .clearfix {
   display: inline-block;
 }
+
 /* start commented backslash hack \*/
 * html .clearfix {
   height: 1%;
 }
+
 .clearfix {
   display: block;
 }
+
 /* close commented backslash hack */
 a {
   color: #00A885;
 }
+
 a:hover,
 a:focus {
   color: #00755d;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
+
 .text-primary {
   color: #00A885;
 }
+
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px white inset !important;
 }
-.navbar-brand1{
+
+.navbar-brand1 {
   color: #00A885;
   margin-bottom: -12px;
 }
 
-.nav-item2{
+.nav-item2 {
   margin-right: 700px;
   list-style: none;
 }
 
 
-.nav-link22{
+.nav-link22 {
   margin-right: 700px;
 }
 
-.nav-item1{
+.nav-item1 {
   margin-right: 700px;
-  list-style: none;  
+  list-style: none;
 }
 
 
-.nav-link11{
+.nav-link11 {
   margin-right: 700px;
-  
+
 }
 
 
 input[type="checkbox"] {
   width: auto;
 }
+
 .btn-primary {
   cursor: pointer;
   background: #00A885;
-  width: 20%;
+  width: 30%;
   border: 0;
   padding: 10px 15px;
   color: #fff;
   font-size: 20px;
-  -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.btn-primary:hover {
+  background: white;
+  color: #00A885;
+}
+
+.botoesloginregistrar> div{
+  display: inline-block;
+}
+
+.tabela,th,td {
+  margin-top: 50px;
+  border: 1px solid;
+  width: 100%;
+  margin-bottom : .5em;
+  table-layout: fixed;
+  text-align: center;
+}
+
+.tabela tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+.tabela tr:hover{
+  background-color: #ddd;
+}
+
+.tabela th{
+  background-color: #00A885;
+}
+
+.form-control {
   margin: 10px;
 }
 
-
-.botaoadicionar{
-  
-}
-
-.table-striped{
-  margin-top: 50px;
-}
-
-
-.form-control{
- margin: 10px;
-}
-
-.d-inline{
+.d-inline {
   text-decoration: none;
   margin: 20px;
 }
@@ -163,10 +197,12 @@ span.validate-tooltip {
   -webkit-animation: tooltipanimation 0.3s 1;
   animation: tooltipanimation 0.3s 1;
 }
+
 .input-group {
   position: relative;
   margin-bottom: 20px;
 }
+
 .input-group label {
   position: absolute;
   top: 9px;
@@ -179,6 +215,7 @@ span.validate-tooltip {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
+
 .input-group input {
   outline: none;
   display: block;
@@ -193,6 +230,7 @@ span.validate-tooltip {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
+
 .input-group .lighting {
   background: #00A885;
   width: 0;
@@ -204,9 +242,11 @@ span.validate-tooltip {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
+
 .input-group.focused .lighting {
   width: 100%;
 }
+
 .input-group.focused label {
   background: #fff;
   font-size: 12px;
@@ -214,9 +254,11 @@ span.validate-tooltip {
   left: 5px;
   color: #00A885;
 }
+
 .input-group span.validate-tooltip {
   margin-top: 0;
 }
+
 .wrapper {
   width: 320px;
   background: #fff;
@@ -224,59 +266,73 @@ span.validate-tooltip {
   min-height: 200px;
   border: 1px solid #f3f3f3;
 }
+
 .wrapper .inner-warpper {
   padding: 50px 30px 60px;
   box-shadow: 1px 1.732px 10px 0px rgba(0, 0, 0, 0.063);
 }
+
 .wrapper .title {
   margin-top: 0;
 }
+
 .wrapper .supporter {
   margin-top: 10px;
   font-size: 14px;
   color: #8E8E8E;
   cursor: pointer;
 }
+
 .wrapper .remember-me {
   cursor: pointer;
 }
+
 .wrapper input[type="checkbox"] {
   float: left;
   margin-right: 5px;
   margin-top: 2px;
   cursor: pointer;
 }
+
 .wrapper label[for="rememberMe"] {
   cursor: pointer;
 }
+
 .wrapper .signup-wrapper {
   padding: 10px;
   font-size: 14px;
   background: #EBEAEA;
 }
+
 .wrapper .signup-wrapper a {
   text-decoration: none;
   color: #7F7F7F;
 }
+
 .wrapper .signup-wrapper a:hover {
   text-decoration: underline;
 }
+
 @-webkit-keyframes tooltipanimation {
   from {
     margin-top: -28px;
   }
+
   to {
     margin-top: 0;
   }
 }
+
 @keyframes tooltipanimation {
   from {
     margin-top: -28px;
   }
+
   to {
     margin-top: 0;
   }
 }
+
 .direction {
   width: 200px;
   position: fixed;
@@ -289,8 +345,82 @@ span.validate-tooltip {
   padding: 10px;
   color: #fff;
 }
+
 @media (max-width: 480px) {
   .direction {
     position: static;
   }
+}
+
+
+
+
+/* ESTILO DA TELA DE ADICIONAR TAREFA */
+
+.addtarefa {
+
+}
+
+#title {
+  text-align: left;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.descricao {
+  display: block;
+}
+
+#description {
+  width: 300px;
+}
+
+.nav-item3 {
+  list-style: none;
+  margin: auto;
+  display: flex;
+}
+
+.botaoadicionar {
+  margin-left: 10px;
+  width: 20%;
+  text-decoration: none;
+  background: #00A885;
+  border: 0;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 15px;
+  border: 1px solid #00A885;
+}
+
+.botaoadicionar:hover{
+  background: white;
+  color: #00A885;
+}
+
+.logout>a {
+  margin-left: 90px;
+  width: 20%;
+  text-decoration: none;
+  background: #00A885;
+  border: 0;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 15px;
+  border: 1px solid #00A885;
+  
+
+}
+
+.logout:hover >a{
+  background: white;
+  color: #00A885;
+}
+
+.usuario {
+  visibility: collapse;
 }

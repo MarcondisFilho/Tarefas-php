@@ -14,12 +14,12 @@
 
         <a class="botaoadicionar" href="{{ route('tasks.create') }}" >Adicionar Tarefa</a>
 
-        <table class="table table-striped">
+        <table class="tabela">
             <thead>
                 <tr>
                     <th>Título</th>
                     <th>Descrição</th>
-                    <th>Criada em</th>
+                    <th>Data</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -34,7 +34,7 @@
                             <form action="{{ route('tasks.destroy', $task) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class=" d-inline" onclick="return confirm('Tem certeza que deseja excluir essa tarefa?')">Excluir</button>
+                                <button type="submit" class=" btn-excluir" onclick="return confirm('Tem certeza que deseja excluir essa tarefa?')">Excluir</button>
                             </form>
                         </td>
                     </tr>

@@ -4,8 +4,8 @@
 
 @section('content')
     <div class="container">
-        <h1>Adicionar Tarefa</h1>
-
+        <h1 class="addtarefa">Adicionar Tarefa</h1>
+        
         <form action="{{ route('tasks.store') }}" method="POST">
             @csrf
 
@@ -15,11 +15,15 @@
             </div>
 
             <div class="form-group">
-                <label for="description">Descrição</label>
+                <label for="description" class="descricao">Descrição</label>
                 <textarea name="description" id="description" class="form-control" rows="4" required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">Salvar</button>
         </form>
     </div>
+@endsection
+
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 @endsection
