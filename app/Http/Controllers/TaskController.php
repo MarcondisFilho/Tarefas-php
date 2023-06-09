@@ -1,30 +1,58 @@
 <?php
 
 namespace App\Http\Controllers;
-
+namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Task;
+use Illuminate\Validation\Rule;
+
 
 class TaskController extends Controller
 {
     public function index()
     {
-        $tasks = Task::latest()->paginate(10);
+        if (Auth::check()) {
+            $loginEmail = Auth::user()->email;
+        } else {
+            // Usuário não autenticado
+        }
+        $user = DB::table('users')->where('email', $loginEmail)->first();
 
-        return view('tasks.index', compact('tasks'));
+
+        //var_dump($user->id);
+
+        $tasks = Task::where('user_id', $user->id)
+            ->latest()
+            ->paginate(10);
+
+
+        return view('tasks.index', compact('tasks', 'user'));
     }
 
     public function create()
     {
-        return view('tasks.create');
+        $loginEmail = Auth::user()->email;
+        $user = DB::table('users')->where('email', $loginEmail)->first();
+
+        return view('tasks.create', compact('user'));
     }
+
 
     public function store(Request $request)
     {
+
+        $loginEmail = Auth::user()->email;
+        $user = DB::table('users')->where('email', $loginEmail)->first();
+
         $request->validate([
             'title' => 'required',
             'description' => 'required',
+            'user_id' => ['required', Rule::in([$user->id])]
         ]);
+
+        var_dump($request->all());
 
         Task::create($request->all());
 

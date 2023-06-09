@@ -16,7 +16,7 @@
             </div>
 
             <div class="form-group">
-                <label for="description">Descrição</label>
+                <label class="descricaoeditar" for="description">Descrição</label>
                 <textarea name="description" id="description" class="form-control" rows="4" required>{{ $task->description }}</textarea>
             </div>
 

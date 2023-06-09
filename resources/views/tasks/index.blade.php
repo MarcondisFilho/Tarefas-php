@@ -13,7 +13,6 @@
         @endif
 
         <a class="botaoadicionar" href="{{ route('tasks.create') }}" >Adicionar Tarefa</a>
-
         <table class="tabela">
             <thead>
                 <tr>
@@ -29,8 +28,8 @@
                         <td>{{ $task->title }}</td>
                         <td>{{ $task->description }}</td>
                         <td>{{ $task->created_at }}</td>
-                        <td>
-                            <a href="{{ route('tasks.edit', $task) }}" class="btn btn-sm btn-editar">Editar</a>
+                        <td class='botaoeditartabela'>
+                            <a href="{{ route('tasks.edit', $task) }}" class="btn-editar">Editar</a>
                             <form action="{{ route('tasks.destroy', $task) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')

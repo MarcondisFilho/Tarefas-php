@@ -19,6 +19,13 @@
                 <textarea name="description" id="description" class="form-control" rows="4" required></textarea>
             </div>
 
+            <div class="form-group" style="visibility:hidden!important;">
+                <label for="user_id" class="user_id">ID do usuário</label>
+                <textarea name="user_id" id="user_id" class="form-control"  readonly>{{$user->id}}</textarea>
+            </div>
+
+
+
             <button type="submit" class="btn btn-primary">Salvar</button>
         </form>
     </div>

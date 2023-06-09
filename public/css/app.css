@@ -30,6 +30,11 @@ body {
   float: left;
 }
 
+.invalid-feedback{
+  display: block;
+  margin: 12px;
+}
+
 .btn-link {
   font-size: 10px;
   width: 100%;
@@ -150,6 +155,10 @@ input[type="checkbox"] {
   text-align: center;
 }
 
+.botaoeditartabela{
+  padding-top: 20px;
+}
+
 .tabela tr:nth-child(even){
   background-color: #f2f2f2;
 }
@@ -168,7 +177,7 @@ input[type="checkbox"] {
 
 .d-inline {
   text-decoration: none;
-  margin: 20px;
+  margin: 30px;
 }
 
 button {
@@ -353,8 +362,6 @@ span.validate-tooltip {
 }
 
 
-
-
 /* ESTILO DA TELA DE ADICIONAR TAREFA */
 
 .addtarefa {
@@ -370,6 +377,10 @@ span.validate-tooltip {
 }
 
 .descricao {
+  display: block;
+}
+
+.descricaoeditar{
   display: block;
 }
 
@@ -401,6 +412,37 @@ span.validate-tooltip {
   color: #00A885;
 }
 
+.btn-excluir{
+  margin-left: 10px;
+  width: 50%;
+  text-decoration: none;
+  background: #00A885;
+  border: 0;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 15px;
+  border: 1px solid #00A885;
+}
+
+.btn-excluir:hover{
+  background: white;
+  color: #00A885;
+}
+
+.btn-editar{
+  margin-left: 10px;
+  width: 50%;
+  text-decoration: none;
+  background: #00A885;
+  border: 0;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 15px;
+  border: 1px solid #00A885;
+}
+
 .logout>a {
   margin-left: 90px;
   width: 20%;
@@ -423,4 +465,8 @@ span.validate-tooltip {
 
 .usuario {
   visibility: collapse;
+}
+
+.alert-success{
+  margin: 20px;
 }
